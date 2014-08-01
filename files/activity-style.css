@@ -24,11 +24,12 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fiel
 }
 #inner-cont {
 	position: absolute;
-	width: 142px;
+	width: 112px;
 	height: 142px;
 	top: 50%;
 	left: 50%;
-	margin: -71px 0 0 -71px;/* -moz-transform: rotate(-5deg);
+	margin: -82px 0 0 -56px;
+/* -moz-transform: rotate(-5deg);
 	-webkit-transform: rotate(-5deg);
 	-o-transform: rotate(-5deg);
 	-ms-transform: rotate(-5deg);
@@ -178,10 +179,10 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fiel
 	box-shadow: 0 0 5px #ff6501;
 }
 .px[type="text"] {
-     width: 100%; 
-     box-sizing: border-box;
-     -webkit-box-sizing:border-box;
-     -moz-box-sizing: border-box;
+	width: 100%; 
+	box-sizing: border-box;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing: border-box;
 }
 .pxbtn {
 	
