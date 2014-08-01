@@ -3,20 +3,19 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fiel
 	padding: 0;color: #444444;
 	font: 14px/1.5 Microsoft YaHei, Helvitica, Verdana, Arial, san-serif;
 }
-.activity-lottery-winning{ background: url(http://www.wxapi.cn/index/images/activity/activity-lottery-bg2.jpg) #2a8a00;}
-.activity-lottery-end{ background: url(http://www.wxapi.cn/index/images/activity/activity-lottery-bg2.jpg) #2a8a00;}
+.activity-lottery-winning, .activity-lottery-end{ background: url(activity-lottery-bg2.jpg) #2a8a00;}
 .activity-coupon-winning{ background-color:#8d0001;}
 .activity-coupon-end{ background-color:#8d0001;}
 .activity-scratch-card-winning{background: url(http://www.wxapi.cn/index/images/activity/activity-scratch-card-bg.jpg) #944f20;}
 .activity-scratch-card-end{background: url(http://www.wxapi.cn/index/images/activity/activity-scratch-card-bg.jpg) #944f20;}
 .activity-lottery-winning .main{
-	background: url(http://www.wxapi.cn/index/images/activity/activity-lottery-bg.png) no-repeat top center;
+	/* background: url(http://www.wxapi.cn/index/images/activity/activity-lottery-bg.png) no-repeat top center; */
 }
 
 #outer-cont {
 	position: relative;
 	width: 100%;
-	top: 20px;
+	height: 310px;
 	margin-bottom: 30px;/* -moz-transform: rotate(-5deg);
 	-webkit-transform: rotate(-5deg);
 	-o-transform: rotate(-5deg);
@@ -25,8 +24,11 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fiel
 }
 #inner-cont {
 	position: absolute;
-	width: 100%;
-	top: 90px;/* -moz-transform: rotate(-5deg);
+	width: 142px;
+	height: 142px;
+	top: 50%;
+	left: 50%;
+	margin: -71px 0 0 -71px;/* -moz-transform: rotate(-5deg);
 	-webkit-transform: rotate(-5deg);
 	-o-transform: rotate(-5deg);
 	-ms-transform: rotate(-5deg);
@@ -41,7 +43,7 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fiel
 #inner {
 	width : 112px;
 	max-width: 112px;
-	height: 142px;
+	height: 170px;
 	margin: 0 auto;
 	cursor: pointer;
 }

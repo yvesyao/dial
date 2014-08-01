@@ -4,7 +4,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-	<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" id="viewport" name="viewport">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black">
 	<meta name="format-detection" content="telephone=no">
@@ -17,8 +17,8 @@
 <body class="activity-lottery-winning">
 	<div class="main">
 		<script type="text/javascript">
-		var loadingObj = new loading(document.getElementById('loading'),{radius:20,circleLineWidth:8});   
-		loadingObj.show();   
+/*		var loadingObj = new loading(document.getElementById('loading'),{radius:20,circleLineWidth:8});   
+		loadingObj.show();   */
 		</script>
 		<div id="outercont">
 			<div id="outer-cont">
@@ -98,13 +98,14 @@
 		}
 
 		function step() {
-			outter.style.webkitTransform = 'rotate(' + steps[now++] + 'deg)';
-			outter.style.MozTransform = 'rotate(' + steps[now++] + 'deg)';
+			inner.style.webkitTransform = 'rotate(' + steps[now++] + 'deg)';
+			inner.style.MozTransform = 'rotate(' + steps[now++] + 'deg)';
 			if (now < steps.length) {
 				requestAnimFrame(step)
 			} else {
 				running = false;
 				setTimeout(function() {
+					prize = 2;
 					if (prize != null) {
 						$("#sncode").text(sncode);
 						var type = "";
@@ -162,8 +163,8 @@
 					running = true;
 					timer = setInterval(function() {
 						i += 5;
-						outter.style.webkitTransform = 'rotate(' + i + 'deg)';
-						outter.style.MozTransform = 'rotate(' + i + 'deg)'
+						inner.style.webkitTransform = 'rotate(' + i + 'deg)';
+						inner.style.MozTransform = 'rotate(' + i + 'deg)'
 					}, 1)
 				},
 				success: function(data) {
@@ -195,7 +196,7 @@
 				},
 				error: function() {
 					prize = null;
-					start();
+					start(prizeDeg[1]);
 					running = false;
 					count++
 				},
@@ -232,4 +233,5 @@
 </script>
 
 
-</body></html>
+</body>
+</html>
